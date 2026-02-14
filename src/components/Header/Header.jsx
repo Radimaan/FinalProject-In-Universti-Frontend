@@ -8,6 +8,8 @@ import { MdOutlineShoppingCart   } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa6";
 import { IoIosGitCompare } from "react-icons/io";
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import Navigation from "./Navigation";
+
 
 
 
@@ -22,7 +24,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const Header = () => {
   return (
-    <header className="mt-1" > 
+    <header className="mt-1 bg-white" > 
 
     <div className="top-strip py-2 border-t-[1px] border-b-[1px] border-gray-250">
  
@@ -157,6 +159,8 @@ const Header = () => {
           </div> 
         </div>
       </div>
+
+      <Navigation />
     </header>
   );
 } 
