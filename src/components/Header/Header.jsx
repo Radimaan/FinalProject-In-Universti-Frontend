@@ -48,7 +48,7 @@ const Header = () => {
       </div>
       </div>
 
-      <div className="header py-3 border-b-[1px] border-gray-250 pl-20 pr-5">
+      <div className="header py-2 border-b-[1px] border-gray-250 pl-20 pr-5">
         <div className="conainer flex items-center justify-between">
           <div className="col1 w-[30%]">
             <Link to={"/" } ><img src="./src/assets/logo.jpg" alt="" /></Link>

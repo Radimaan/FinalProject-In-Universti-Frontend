@@ -19,15 +19,15 @@ const Navigation = () => {
 
   return (
     <>
-    <nav className="navigation py-3 border-b-[1px] border-gray-250">
+    <nav className="navigation  border-b-[1px] border-gray-250">
       <div className="container flex items-center justify-end gap-8">
-        <div className='col-1 w-[25%] '>
+        <div className='col-1 w-[20%] '>
           <Button className="!text-black  !font-semibold gap-2 !w-full" onClick={() => OpenCategoryPanel(true)}><RiMenu2Fill className='!font-bold text-[18px]' />
  SHOP By Categories <LiaAngleDownSolid className='!text-[13px] ml-auto font-bold' /></Button>
         </div>
         <div className='col-2 w-[60%]'>
 
-          <ul className='flex items-center gap- '>
+          <ul className='flex items-center  '>
             <li className='list-none '>
               <Link to="/#" className=' !font-[600] hover:text-[#ff5252] transition'>
               <Button className="!text-[15px] !font-[500] hover:!text-[#ff5252] transition !text-black">
@@ -35,12 +35,152 @@ const Navigation = () => {
               </Button>
               </Link>
             </li>
-            <li className='list-none '>
+            <li className='list-none relative  group/Fashion'>
               <Link to="/#" className='text-[16px] !font-[500] hover:text-[#ff5252] transition'>
               <Button className="!text-[15px] !font-[500] hover:!text-[#ff5252] transition !text-black">
                 Fations
               </Button>
               </Link>
+
+              <div className="sub-menu absolute top-[100%] left-0 w-full min-w-[200px] !justify-start !text-left bg-white shadow-sm 
+              opacity-0 invisible
+                              translate-y-6
+                          
+                              transition-all duration-300 ease-out
+                          
+                              group-hover/Fashion:opacity-100
+                              group-hover/Fashion:visible
+                              group-hover/Fashion:translate-y-0
+                            ">
+                <ul>
+                  <li className="list-none Relative  group/Fashion-Sub1 ">
+                    <Link to="/"className="w-full">
+                    <Button className="!text-[15px] !font-[500] transition !text-[rgba(0,0,0,0.8)] w-full !justify-start !rounded-none">
+                      Men</Button></Link>
+
+                      <div
+                            className="
+                              sub-menu absolute top-[4%] left-[100%]
+                              w-full min-w-[200px]
+                              bg-white shadow-sm
+                          
+                              opacity-0 invisible
+                              translate-x-6
+                          
+                              transition-all duration-300 ease-out
+                          
+                              group-hover/Fashion-Sub1:opacity-100
+                              group-hover/Fashion-Sub1:visible
+                              group-hover/Fashion-Sub1:translate-x-0
+                            "
+                          >
+
+                <ul>
+                  <li className="list-none">
+                    <Link to="/"className="w-full">
+                    <Button className="!text-[15px] !font-[500] transition !text-[rgba(0,0,0,0.8)] w-full !justify-start !rounded-none">
+                      T-shirt</Button></Link>
+                      </li>   
+                      <li className="list-none">
+                      <Link to="/"className="w-full">
+
+                    <Button className="!text-[15px] !font-[500]  transition !text-[rgba(0,0,0,0.8)] w-full !justify-start !rounded-none">
+                      Suit</Button></Link>
+                      </li>   
+                      <li className="list-none">
+                      <Link to="/"className="w-full">
+                    <Button className="!text-[15px] !font-[500] !text-[rgba(0,0,0,0.8)] transition w-full !justify-start !rounded-none">
+                      Shoes</Button> </Link>
+                      </li>
+                      <li>
+                      <Link to="/"className="w-full">
+                    <Button className="!text-[15px] !font-[500]  !transition !text-[rgba(0,0,0,0.8)] w-full !justify-start !rounded-none">
+                      Jeans</Button> </Link>
+                      </li>
+                      <li>
+                      <Link to="/"className="w-full">
+                    <Button className="!text-[15px] !font-[500] !text-[rgba(0,0,0,0.8)] transition  w-full !justify-start !rounded-none">
+                      Watchs</Button>
+                      </Link>
+                      </li>
+                </ul>
+              </div>
+                      </li>   
+                      <li className="list-non relative group/Fashion-Sub2">
+                      <Link to="/"className="w-full">
+
+                    <Button className="!text-[15px] !font-[500]  transition !text-[rgba(0,0,0,0.8)] w-full !justify-start !rounded-none">
+                      Women</Button></Link>
+
+
+
+
+                      <div
+                            className="
+                              sub-menu absolute top-[-80%] left-[100%]
+                              w-full min-w-[200px]
+                              bg-white shadow-sm
+                          
+                              opacity-0 invisible
+                              translate-x-6
+                          
+                              transition-all duration-300 ease-out
+                          
+                              group-hover/Fashion-Sub2:opacity-100
+                              group-hover/Fashion-Sub2:visible
+                              group-hover/Fashion-Sub2:translate-x-0
+                            "
+                          >
+
+                <ul>
+                  <li className="list-none">
+                    <Link to="/"className="w-full">
+                    <Button className="!text-[15px] !font-[500] transition !text-[rgba(0,0,0,0.8)] w-full !justify-start !rounded-none">
+                      T-shirt</Button></Link>
+                      </li>   
+                      <li className="list-none">
+                      <Link to="/"className="w-full">
+
+                    <Button className="!text-[15px] !font-[500]  transition !text-[rgba(0,0,0,0.8)] w-full !justify-start !rounded-none">
+                      Dress</Button></Link>
+                      </li>   
+                      <li className="list-none">
+                      <Link to="/"className="w-full">
+                    <Button className="!text-[15px] !font-[500] !text-[rgba(0,0,0,0.8)] transition w-full !justify-start !rounded-none">
+                      Sneakers</Button> </Link>
+                      </li>
+                      <li>
+                      <Link to="/"className="w-full">
+                    <Button className="!text-[15px] !font-[500]  !transition !text-[rgba(0,0,0,0.8)] w-full !justify-start !rounded-none">
+                      Handbag</Button> </Link>
+                      </li>
+                      <li>
+                      <Link to="/"className="w-full">
+                    <Button className="!text-[15px] !font-[500] !text-[rgba(0,0,0,0.8)] transition  w-full !justify-start !rounded-none">
+                      Watchs</Button>
+                      </Link>
+                      </li>
+                </ul>
+              </div>
+                      </li>   
+                      <li className="list-none">
+                      <Link to="/"className="w-full">
+                    <Button className="!text-[15px] !font-[500] !text-[rgba(0,0,0,0.8)] transition w-full !justify-start !rounded-none">
+                      Kids</Button> </Link>
+                      </li>
+                      <li>
+                      <Link to="/"className="w-full">
+                    <Button className="!text-[15px] !font-[500]  !transition !text-[rgba(0,0,0,0.8)] w-full !justify-start !rounded-none">
+                      Girls</Button> </Link>
+                      </li>
+                      <li>
+                      <Link to="/"className="w-full">
+                    <Button className="!text-[15px] !font-[500] !text-[rgba(0,0,0,0.8)] transition  w-full !justify-start !rounded-none">
+                      Boys</Button>
+                      </Link>
+                      </li>
+                </ul>
+              </div>
             </li>
             <li className='list-none '>
               <Link to="/#" className='text-[16px] !font-[500] hover:text-[#ff5252] transition'><Button className="!text-[15px] !font-[500] hover:!text-[#ff5252] transition !text-black">Electronics</Button></Link>
