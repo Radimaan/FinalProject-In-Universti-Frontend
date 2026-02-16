@@ -22,8 +22,9 @@ const Navigation = () => {
     <nav className="navigation  border-b-[1px] border-gray-250">
       <div className="container flex items-center justify-end gap-8">
         <div className='col-1 w-[20%] '>
-          <Button className="!text-black  !font-semibold gap-2 !w-full" onClick={() => OpenCategoryPanel(true)}><RiMenu2Fill className='!font-bold text-[18px]' />
- SHOP By Categories <LiaAngleDownSolid className='!text-[13px] ml-auto font-bold' /></Button>
+          <Button className="!text-black  !font-semibold gap-2 !w-full !text-[12px] group/me"  onClick={() => OpenCategoryPanel(true)}><RiMenu2Fill className='!font-bold text-[18px]' />
+ Shop By Categories <LiaAngleDownSolid className='!text-[12px] ml-auto font-bold                             group-hover/me:translate-y-1 ransition-all duration-300 ease-out
+' /></Button>
         </div>
         <div className='col-2 w-[60%]'>
 
