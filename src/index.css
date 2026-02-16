@@ -5,6 +5,7 @@ body{
   font-optical-sizing: auto;
   background: #f5f0f0;
   color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
 }
 .container {
   width: 95%;
@@ -24,5 +25,43 @@ link:hover{
 nav ul li button{
   text-transform: capitalize !important;
 
+}
+.silderhome{
+  overflow: inherit !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: #000;
+
+}
+
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next::after {
+  font-size: 24px !important;
+  color: #000 !important;
+}
+
+.swiper {
+  --swiper-navigation-size: 30px;
+}
+
+
+
+
+::-webkit-scrollbar{
+  width: 10px !important;
+  height: 10px !important;
 }
 

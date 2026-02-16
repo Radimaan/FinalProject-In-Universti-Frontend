@@ -51,6 +51,7 @@ const Navigation = () => {
                               group-hover/Fashion:opacity-100
                               group-hover/Fashion:visible
                               group-hover/Fashion:translate-y-0
+                              z-50
                             ">
                 <ul>
                   <li className="list-none Relative  group/Fashion-Sub1 ">
@@ -72,6 +73,7 @@ const Navigation = () => {
                               group-hover/Fashion-Sub1:opacity-100
                               group-hover/Fashion-Sub1:visible
                               group-hover/Fashion-Sub1:translate-x-0
+                              z-50
                             "
                           >
 
