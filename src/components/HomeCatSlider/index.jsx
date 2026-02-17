@@ -65,7 +65,7 @@ const HomeCatSlider = () => {
   ];
 
   return (
-    <div className="homeCatSlider">
+    <div className="homeCatSlider py-8 pb-4">
       <div className="container">
         <Swiper
           slidesPerView={7}
