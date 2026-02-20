@@ -4,10 +4,19 @@ import HomeCatSlider from "../../components/HomeCatSlider";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import AdsPanerSlider from "../../components/AdsPanerSlider";
 
-import Box from '@mui/material/Box';
 import Tabs, { tabsClasses } from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import ProductsSlider from "../../components/ProductSlider";
+
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+
+import PlogItem from "../../components/PlogItem";
+import Footer from "../../components/Footer";
 
 const Home = () => {
 
@@ -89,8 +98,75 @@ const Home = () => {
           <ProductsSlider items={6} />
 
 
+          <AdsPanerSlider items={3} />
+
         </div>
       </section>
+      <section className="pb-5 bg-white ">
+        <div className="container">
+          <h2 className="text-[20px] font-[600]">Feuter Products</h2>
+          <ProductsSlider items={6} />
+          <AdsPanerSlider items={3} />
+
+        </div>
+      </section>
+
+
+      <section className="pb-5 bg-white PlogSection  ">
+        <div className=" container">
+          <h2 className="text-[20px] font-[600] mb-4  ">Leatst Products</h2>
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+
+            navigation={true}
+            modules={[Navigation]}
+
+            className="mySwiper"
+          >
+            <SwiperSlide >
+
+              <PlogItem />
+
+            </SwiperSlide>
+            <SwiperSlide >
+
+              <PlogItem />
+
+            </SwiperSlide>
+            <SwiperSlide >
+
+              <PlogItem />
+
+            </SwiperSlide>
+            <SwiperSlide >
+
+              <PlogItem />
+
+            </SwiperSlide>
+            <SwiperSlide >
+
+              <PlogItem />
+
+            </SwiperSlide>
+            <SwiperSlide >
+
+              <PlogItem />
+
+            </SwiperSlide>
+            <SwiperSlide >
+
+              <PlogItem />
+
+            </SwiperSlide>
+          </Swiper>
+
+
+        </div>
+      </section>
+
+
+      <Footer/>
 
       <br />
       <br />
