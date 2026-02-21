@@ -19,6 +19,7 @@ import PlogItem from "../../components/PlogItem";
 import Footer from "../../components/Footer";
 import HomeSliderV2 from "../../components/HomeSliderV2";
 import PanerBoxV2 from "../../components/PanerBoxV2/indec";
+import AdsPanerSliderV2 from "../../components/AdsPanerSliderV2";
 
 const Home = () => {
 
@@ -101,7 +102,7 @@ const Home = () => {
             </div>
             <p className="font-bold text-[25px]">- Only $200*</p>
           </div>
-          <AdsPanerSlider items={4} />
+          <AdsPanerSliderV2 items={4} />
         </div>
       </section>
 

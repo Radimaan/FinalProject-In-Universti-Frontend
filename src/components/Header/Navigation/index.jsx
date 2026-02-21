@@ -36,7 +36,7 @@ const Navigation = () => {
                 </Link>
               </li>
               <li className='list-none relative  group/Fashion'>
-                <Link to="/#" className='text-[16px] !font-[500] hover:text-[#ff5252] transition'>
+                <Link to="/ProductListing" className='text-[16px] !font-[500] hover:text-[#ff5252] transition'>
                   <Button className="!text-[15px] !font-[500] hover:!text-[#ff5252] transition !text-black">
                     Fations
                   </Button>
