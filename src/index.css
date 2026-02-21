@@ -13,9 +13,9 @@ body{
 .link:hover{
   color: #ff5252;
   
-
-
 }
+
+.btn-org{background: #ff5252 !important; color: #fff !important; font-weight: 500 !important; font-size: 16px !important; padding: 5px 15px !important; margin-top: 10px !important;}
 ::-webkit-scrollbar{
   width: 8px !important;
   height: 8px !important;
@@ -107,3 +107,9 @@ nav ul li button{
 .MuiTab-textColorPrimary.Mui-selected{color: #ff5252 !important;}
 
 .ProductsSlider .swiper-wrapper{padding: 15px ; padding-left: 0px; margin-left: 5px; margin-right: 15px;}
+
+
+.css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root.Mui-checked{
+  color: #ff5252 !important;;
+}
+.MuiFormControlLabel-label{font-size: 13px !important;color: rgba(0, 0, 0, 0.8) }
