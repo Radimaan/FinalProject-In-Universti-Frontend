@@ -17,6 +17,8 @@ import "swiper/css/navigation";
 
 import PlogItem from "../../components/PlogItem";
 import Footer from "../../components/Footer";
+import HomeSliderV2 from "../../components/HomeSliderV2";
+import PanerBoxV2 from "../../components/PanerBoxV2/indec";
 
 const Home = () => {
 
@@ -32,6 +34,18 @@ const Home = () => {
 
     <>
       <HomeSlider />
+
+      <section className="py-6">
+        <div className="container flex  gap-5">
+          <div className="part1 w-[70%]  overflow-hidden"><HomeSliderV2/></div>
+          <div className="part2 w-[30%] gap-5 flex items-center justify-between flex-col gap-">
+            <PanerBoxV2 info='left' image={"https://imgs.search.brave.com/q9SRUNAcuprvNJrzjTKuOiJjVgT_4xbLpBiHN203CjY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/Z2xvYmFsLm5ld3Mu/c2Ftc3VuZy5jb20v/Z2xvYmFsL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDE3LzAzL0lu/LURlcHRoLUdlYXIt/MzYwLWFuZC1WUl90/aHVtYjcwNC5qcGc"}/>
+
+             
+            <PanerBoxV2 info='right' image={"https://imgs.search.brave.com/pBMdUWq3Qz6E9AEznqumNxFzLF2Nlcn-D4Yod_2f6ro/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/bGl2aW5nc3BhY2Vz/LmNvbS9nbG9iYWxh/c3NldHMvcHJvZHVj/dGFzc2V0cy8zMDAw/MDAtMzk5OTk5LzMw/MDAwMC0zMDk5OTkv/MzA0MDAwLTMwNDk5/OS8zMDQ2MDAtMzA0/Njk5LzMwNDYxOS8z/MDQ2MTlfZ3JlZW5f/ZmFicmljX2Rpbmlu/Z19jaGFpcl9zaWdu/YXR1cmVfNzE3MTYu/anBnP3c9MzczJmg9/MjUxJm1vZGU9cGFk"}/>
+            </div>
+        </div>
+      </section>
       <HomeCatSlider />
 
 

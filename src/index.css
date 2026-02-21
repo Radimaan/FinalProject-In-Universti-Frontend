@@ -50,29 +50,24 @@ nav ul li button{
   overflow: inherit !important;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.swiper-button-prev, .swiper-button-next {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: #f7f7f7;
+  background: #ff5252;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 30px;
+  height: 30px;
 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  color: #8a8181;
-  overflow: hidden;
+ 
 
 
 }
 
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  font-size: 20px !important;
-  color: #000 !important;
+.swiper-button-prev, .swiper-button-next {
+  font-size: 10px !important;
+  color: #ffffff !important;
 }
 
 .swiper {
@@ -88,7 +83,7 @@ nav ul li button{
   overflow: hidden;
 }
 .homeCatSlider .swiper-button-prev::after{
-  font-size: 18px !important;
+  font-size: 10px !important;
 }
 
 .homeCatSlider .swiper-button-prev {left: 10px !important;}
@@ -113,3 +108,43 @@ nav ul li button{
   color: #ff5252 !important;;
 }
 .MuiFormControlLabel-label{font-size: 13px !important;color: rgba(0, 0, 0, 0.8) }
+
+.swiper-pagination-bullet-active{background: #ff5252 !important;}
+
+.HomeSliderV2 .swiper-slide-active .info {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.HomeSliderV2 .info h4,
+.HomeSliderV2 .info h2,
+.HomeSliderV2 .info h3,
+.HomeSliderV2 .info button {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.4s ease;
+}
+
+.HomeSliderV2 .swiper-slide-active .info h4 {
+  transition-delay: 0.2s;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.HomeSliderV2 .swiper-slide-active .info h2 {
+  transition-delay: 0.25s;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.HomeSliderV2 .swiper-slide-active .info h3 {
+  transition-delay: 0.3s;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.HomeSliderV2 .swiper-slide-active .info button {
+  transition-delay: 0.35s;
+  opacity: 1;
+  transform: translateX(0);
+}
