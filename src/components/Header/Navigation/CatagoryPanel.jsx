@@ -6,6 +6,7 @@ import { FaPlus, FaMinus } from "react-icons/fa6";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import "./style.css";
+import CatagoryCollaps from "../../CatagorCollaps";
 
 const CatagoryPanel = ({ isOpenCatPAnel, OpenCategoryPanel }) => {
   const [openMenu, setOpenMenu] = useState(null); // Track which menu is open
@@ -61,57 +62,8 @@ const CatagoryPanel = ({ isOpenCatPAnel, OpenCategoryPanel }) => {
         </div>
 
         {/* Scroll Area */}
-        <div className="overflow-y-auto h-[calc(100vh-60px)]">
-          <ul className="flex flex-col">
-
-            {categories.map((cat) => (
-              <li key={cat.key} className="list-none border-b">
-
-                {/* Main Category */}
-                <Button
-                  onClick={() => toggleMenu(cat.key)}
-                  className="w-full !justify-between !text-left !text-[15px] !font-[500] !text-[rgba(0,0,0,0.87)]"
-                >
-                  {cat.name}
-                  {openMenu === cat.key ? <FaMinus /> : <FaPlus />}
-                </Button>
-
-                {/* Subcategories */}
-                {openMenu === cat.key && (
-                  <ul className="pl-6">
-                    {cat.subcategories.map((sub) => (
-                      <li key={sub.key}>
-                        <Button
-                          onClick={() => toggleSubMenu(sub.key)}
-                          className="w-full !justify-between !text-left !text-[14px] !font-[500] !text-[rgba(0,0,0,0.87)]"
-                        >
-                          {sub.name}
-                          {openSubMenu === sub.key ? <FaMinus /> : <FaPlus />}
-                        </Button>
-
-                        {/* Items */}
-                        {openSubMenu === sub.key && sub.items.length > 0 && (
-                          <ul className="pl-6 pb-2">
-                            {sub.items.map((item, idx) => (
-                              <li key={idx}>
-                                <Link className="!w-full !justify-start !text-[14px] !text-gray-600 hover:!text-[#ff5252] transition">
-                                  {item}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-
-                      </li>
-                    ))}
-                  </ul>
-                )}
-
-              </li>
-            ))}
-
-          </ul>
-        </div>
+        <CatagoryCollaps/>
+  
 
       </Box>
     </Drawer>

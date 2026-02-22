@@ -150,3 +150,8 @@ nav ul li button{
   opacity: 1;
   transform: translateX(0);
 }
+
+
+.MuiCheckbox-root{padding: 6px !important;}
+
+.itemactionview button.active svg{color: #ff5252 !important; opacity: 1;}
