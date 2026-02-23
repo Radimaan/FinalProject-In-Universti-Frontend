@@ -12,13 +12,15 @@ import { LuMenu } from "react-icons/lu";
 
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Pagination from '@mui/material/Pagination';
+
 
 
 
 
 const ProductLisiting = () => {
 
-  const [ItemView, setItemView]= useState('grid');
+  const [ItemView, setItemView] = useState('grid');
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -29,7 +31,7 @@ const ProductLisiting = () => {
     setAnchorEl(null);
   };
   return (
-    <section className="py-5">
+    <section className="py-5 pb-0">
       <div className="container pl-2  ">
         <Breadcrumbs aria-label="breadcrumb">
           <Link underline="hover" color="inherit" href="/" className="link">
@@ -53,8 +55,22 @@ const ProductLisiting = () => {
           <div className="rigthcontent w-[80%] py-3">
             <div className="w-full bg-[#f1f1f1] p-2 mb-4 rounded-md flex items-center justify-between ">
               <div className="flex col1 items-center gap-3 itemactionview">
-                <Button className={`!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-black ${setItemView === 'list ' && 'active'}`} onClick={()=>setItemView('list')}><LuMenu className="!text-[rgba(0,0,0,0.7)]" /></Button>
-                <Button className={`!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-black ${setItemView === 'grid ' && 'active'}`} onClick={()=>setItemView('grid')}><IoGridSharp className="!text-[rgba(0,0,0,0.7)]" /></Button>
+
+                <Button
+                  className={`!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-black ${ItemView === 'list' ? 'active' : ''
+                    }`}
+                  onClick={() => setItemView('list')}
+                >
+                  <LuMenu className="text-[rgba(0,0,0,0.7)]" />
+                </Button>
+
+                <Button
+                  className={`!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-black ${ItemView === 'grid' ? 'active' : ''
+                    }`}
+                  onClick={() => setItemView('grid')}
+                >
+                  <IoGridSharp className="text-[rgba(0,0,0,0.7)]" />
+                </Button>
 
                 <span className="text-[14px] font-[500]  text-[rgba(0,0,0,0.7)]">There Are 27 producrs.</span>
               </div>
@@ -82,7 +98,7 @@ const ProductLisiting = () => {
                     },
                   }}
                 >
-                  <MenuItem onClick={handleClose}  className=" !rounded-lg !text-black !text-[12px] !capitalize ">Seles, highest to lowest</MenuItem>
+                  <MenuItem onClick={handleClose} className=" !rounded-lg !text-black !text-[12px] !capitalize ">Seles, highest to lowest</MenuItem>
                   <MenuItem onClick={handleClose} className=" !rounded-lg !text-black !text-[12px] !capitalize ">Relevance</MenuItem>
                   <MenuItem onClick={handleClose} className=" !rounded-lg !text-black !text-[12px] !capitalize ">Name, A to Z</MenuItem>
                   <MenuItem onClick={handleClose} className=" !rounded-lg !text-black !text-[12px] !capitalize ">Name, Z to A</MenuItem>
@@ -95,41 +111,41 @@ const ProductLisiting = () => {
 
               {
                 ItemView === "grid" ?
-                <>
-                              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem />
-                </>
+                  <>
+                    <ProductItem />
+                    <ProductItem />
+                    <ProductItem />
+                    <ProductItem />
+                    <ProductItem />
+                    <ProductItem />
+                    <ProductItem />
+                    <ProductItem />
+                   
+                  
+                  </>
 
-                :
+                  :
 
-                <>
-                <ProductItemListVieu/>
-                <ProductItemListVieu/>
-                <ProductItemListVieu/>
-                <ProductItemListVieu/>
-                <ProductItemListVieu/>
-                <ProductItemListVieu/>
-                <ProductItemListVieu/>
-                <ProductItemListVieu/>
-                <ProductItemListVieu/>
-                <ProductItemListVieu/>
-                <ProductItemListVieu/>
-                </>
+                  <>
+                    <ProductItemListVieu />
+                    <ProductItemListVieu />
+                    <ProductItemListVieu />
+                    <ProductItemListVieu />
+                    <ProductItemListVieu />
+                    <ProductItemListVieu />
+                    <ProductItemListVieu />
+                    <ProductItemListVieu />
+                    <ProductItemListVieu />
+                    <ProductItemListVieu />
+                    <ProductItemListVieu />
+                  </>
               }
+
+            </div>
+
+
+            <div className="flex items-center justify-center mt-10">
+                    <Pagination count={10} showFirstButton showLastButton />
 
             </div>
 
