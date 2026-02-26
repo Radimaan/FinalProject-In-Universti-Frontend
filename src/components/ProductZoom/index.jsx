@@ -64,7 +64,7 @@ const ProductZoom = () => {
           direction="vertical"
           navigation
           modules={[Navigation]}
-          className="!h-[76vh] ZoomProductSliderThumbs"
+          className="!h-[88vh] ZoomProductSliderThumbs"
         >
           {ProductCatSlider.map((item, index) => (
             <SwiperSlide key={item.id}>
@@ -86,7 +86,7 @@ const ProductZoom = () => {
       </div>
 
       {/* Big Zoom Slider */}
-      <div className="w-[80%] zoomcontainer h-[500px] overflow-hidden rounded-md">
+      <div className="w-[80%] zoomcontainer h-[500px] overflow-hidden rounded-md ">
         <Swiper
           ref={zoomSliderBig}
           slidesPerView={1}
@@ -97,6 +97,7 @@ const ProductZoom = () => {
             <SwiperSlide key={item.id}>
               <Zoom
                 src={item.image}
+                className="!w-full"
                 zoomType="hover"
                 zoomScale={1}
               />
