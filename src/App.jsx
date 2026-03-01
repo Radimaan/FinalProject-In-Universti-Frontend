@@ -14,16 +14,26 @@ import { IoCloseSharp } from "react-icons/io5";
 import ProductZoom from "./components/ProductZoom";
 import ProductDetailsComponent from "./components/ProductDetails/inde";
 
+
+
+import Drawer from '@mui/material/Drawer';
+import CartPanel from "./components/CartPanel";
+
+
 export const MyContext = createContext();
 
 function App() {
-  const [openProductDetailsModel, setOpenProductDetailsModel] =
-    useState(false);
+  const [openProductDetailsModel, setOpenProductDetailsModel] = useState(false);
   const [fullWidth, setFullWidth] = useState(true);
-const [maxWidth, setMaxWidth] = useState("lg");
+  const [maxWidth, setMaxWidth] = useState("lg");
+
+  const [openCartPanel, setOpenCartPanel] = useState(false);
 
 
- 
+   const toggleCartPanel = (newOpen) => () => {
+    setOpenCartPanel(newOpen);
+  };
+
   const handleClickCloseProductDetailsModel = () => {
     setOpenProductDetailsModel(false);
   };
@@ -33,42 +43,51 @@ const [maxWidth, setMaxWidth] = useState("lg");
   };
 
   const values = {
-    setOpenProductDetailsModel
+
+    setOpenProductDetailsModel,
+    setOpenCartPanel,
+    toggleCartPanel,
+    openCartPanel
   };
 
   return (
-    <MyContext.Provider value={values}>
-      <RouterProvider router={router} />
 
-      
+    <>
+      <MyContext.Provider value={values}>
+        <RouterProvider router={router} />
 
-      <Dialog
-        onClose={handleProductDetailsModel}
-        aria-labelledby="customized-dialog-title"
-        open={openProductDetailsModel}
-        className="ProductDetailsModel"
-         fullWidth={fullWidth}
-        maxWidth={maxWidth}
-      >
-        
-        
 
-        <DialogContent dividers>
-          <div className="flex items-center w-full ProductDetailsModelContainer relative gap-8
+
+        <Dialog
+          onClose={handleProductDetailsModel}
+          aria-labelledby="customized-dialog-title"
+          open={openProductDetailsModel}
+          className="ProductDetailsModel"
+          fullWidth={fullWidth}
+          maxWidth={maxWidth}
+        >
+
+
+
+          <DialogContent dividers>
+            <div className="flex items-center w-full ProductDetailsModelContainer relative gap-8
            ">
-            <Button className="!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-black !absolute top-0 right-0 !bg-[#f1f1f1]" onClick={handleClickCloseProductDetailsModel}><IoCloseSharp className="!text-[20px]"/></Button>
-            <div className="col1 w-[40%] h-full">
-              <ProductZoom/>
-            </div>
-            <div className="col2 ">
-             <ProductDetailsComponent/>
-              
-            </div>
-          </div>
-        </DialogContent>
+              <Button className="!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-black !absolute top-0 right-0 !bg-[#f1f1f1]" onClick={handleClickCloseProductDetailsModel}><IoCloseSharp className="!text-[20px]" /></Button>
+              <div className="col1 w-[40%]">
+                <ProductZoom />
+              </div>
+              <div className="col2  ">
+                <ProductDetailsComponent />
 
-      </Dialog>
-    </MyContext.Provider>
+              </div>
+            </div>
+          </DialogContent>
+
+        </Dialog>
+      </MyContext.Provider>
+
+     
+    </>
   );
 }
 

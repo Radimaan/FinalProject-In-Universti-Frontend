@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import ProductDelails from "../Pages/ProductDetails";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import { Car } from "lucide-react";
+import CartPage from "../Pages/Cart";
 
 const MainLayout = () => {
   return (
@@ -41,7 +43,12 @@ export const router = createBrowserRouter([
       {
         path : '/Register',
         element : <Register/>
+      },
+      {
+        path : '/cart',
+        element :<CartPage/>
       }
+
     ],
   },
 ]);

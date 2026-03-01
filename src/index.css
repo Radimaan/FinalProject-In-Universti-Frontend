@@ -216,3 +216,4 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .iiz{border-radius: 20px !important;}
+#Size-menu .MuiButtonBase-root{font-size: 12px !important;}
