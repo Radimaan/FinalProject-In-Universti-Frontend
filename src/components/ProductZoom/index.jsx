@@ -64,7 +64,7 @@ const ProductZoom = () => {
           direction="vertical"
           navigation
           modules={[Navigation]}
-          className="!h-[88vh] ZoomProductSliderThumbs"
+          className="!h-[80vh] ZoomProductSliderThumbs"
         >
           {ProductCatSlider.map((item, index) => (
             <SwiperSlide key={item.id}>

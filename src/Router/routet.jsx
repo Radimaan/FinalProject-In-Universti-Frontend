@@ -4,6 +4,8 @@ import Home from "../Pages/Home/Home";
 import ProductLisiting from "../Pages/ProductLiting";
 import Footer from "../components/Footer";
 import ProductDelails from "../Pages/ProductDetails";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
 
 const MainLayout = () => {
   return (
@@ -31,6 +33,14 @@ export const router = createBrowserRouter([
       {
         path : '/ProductDetaills/:id',
         element : <ProductDelails/>
+      },
+      {
+        path : '/Login',
+        element : <Login/>
+      },
+      {
+        path : '/Register',
+        element : <Register/>
       }
     ],
   },

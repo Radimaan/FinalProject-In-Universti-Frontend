@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Rating from '@mui/material/Rating';
 import { Button } from "@mui/material";
@@ -6,9 +6,12 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoIosGitCompare } from "react-icons/io";
 import { MdOutlineShoppingCart, MdZoomOutMap } from "react-icons/md";
 import { RiRobot3Line } from "react-icons/ri";
+import { MyContext } from "../../App";
 
 
 const ProductItem = () => {
+    const context = useContext(MyContext)
+  
   return (
     <div className="ProductItem rounded-2xl overflow-hidden border-[1px]  border-[rgba(0,0,0,0.1)] flex flex-row items-center transition-all duration-300 shadow-lg">
       <div className="ImageWaper w-[25%] h-[220px] overflow-hidden relative group/min">
@@ -35,7 +38,7 @@ const ProductItem = () => {
           <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white !text-black hover:!bg-[#ff5252]  ease-in-out hover:!text-white transition-all  group  ">
             <FaRegHeart className="text-[18px] !text-black group-hover:!text-white"/>
           </Button>
-          <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white text-black hover:!bg-[#ff5252]ease-in-out hover:!text-white hover:!bg-[#ff5252]  transition-all  group  ">
+          <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white text-black hover:!bg-[#ff5252]ease-in-out hover:!text-white hover:!bg-[#ff5252]  transition-all  group  " onClick={()=>context.setOpenProductDetailsModel(true)}>
             <MdZoomOutMap className="text-[18px] !text-black group-hover:!text-white"/>
           </Button>
           <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white text-black hover:!bg-[#ff5252] ease-in-out hover:!text-white transition-all  group   ">

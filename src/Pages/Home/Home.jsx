@@ -181,7 +181,7 @@ const Home = () => {
       </section>
 
 
-      <Footer/>
+     
 
     
     </>
