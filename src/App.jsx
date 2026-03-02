@@ -14,10 +14,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import ProductZoom from "./components/ProductZoom";
 import ProductDetailsComponent from "./components/ProductDetails/inde";
 
-
-
-import Drawer from '@mui/material/Drawer';
-import CartPanel from "./components/CartPanel";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 export const MyContext = createContext();
@@ -30,7 +27,7 @@ function App() {
   const [openCartPanel, setOpenCartPanel] = useState(false);
 
 
-   const toggleCartPanel = (newOpen) => () => {
+  const toggleCartPanel = (newOpen) => () => {
     setOpenCartPanel(newOpen);
   };
 
@@ -42,12 +39,24 @@ function App() {
     setOpenProductDetailsModel(false);
   };
 
+  const OpenAleartBox = (Status, msg) => {
+    if (Status === "Success") {
+      toast.success(msg || "Action was successful!");
+    } else if (Status === "Error") {
+      toast.error(msg || "An error occurred. Please try again.");
+    } else {
+      toast(Status);
+    }
+
+  }
+
   const values = {
 
     setOpenProductDetailsModel,
     setOpenCartPanel,
     toggleCartPanel,
-    openCartPanel
+    openCartPanel,
+    OpenAleartBox
   };
 
   return (
@@ -84,9 +93,12 @@ function App() {
           </DialogContent>
 
         </Dialog>
+
+        <Toaster />
+
       </MyContext.Provider>
 
-     
+
     </>
   );
 }

@@ -7,47 +7,33 @@ import { FcGoogle } from 'react-icons/fc';
 import { MyContext } from '../../App';
 
 
-const Login = () => {
+const ForgetPassword = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [FromFaids, setFromFaids] = useState({
-      email: "",
-      password: "",
-  });
+  const [showPassword2, setShowPassword2] = useState(false);
+  
+  
  
   const history = useNavigate();
 
   const context = useContext(MyContext);
-
-  const ForgetPasswd = () => {
-    if(FromFaids.email === ""){
-      history("/Verify");
-      context.OpenAleartBox("Success", "OTP Code Sent To Your Email")
-      
-    }
+  const ChangedPassword = () => {
+    context.OpenAleartBox("Success", "Password Changed Successfully!")
+    history("/Login");
   }
+
+ 
 
   return (
     <section className="py-10 sectin">
       <div className="container">
         <div className="card shadow-md p-5 w-[400px] m-auto rounded-md bg-white">
-          <h2 className="text-[20px] font-[500] text-center text-black">Login To Your Account</h2>
+          <h2 className="text-[20px] font-[500] text-center text-black">Forget Password </h2>
           <form action="" className="flex flex-col gap-4 mt-5 w-full px-3">
-            <div className="form-group pb-3">
-              <TextField
-                id="Email"
-                type='Emali'
-                label="Email *"
-                variant="outlined"
-                className='w-full'
-                name='name'
-                />
-
-            </div>
             <div className="form-group relative flex items-center">
 
               <TextField
                 id="standard-password-input"
-                label="Password"
+                label="New Password"
                 type={showPassword ? "text" : "password"}
                 autoComplete="current-password"
                 variant="outlined"
@@ -60,17 +46,32 @@ const Login = () => {
               >
                 {showPassword ? <IoMdEyeOff className="text-[20px] opacity-75" /> : <IoMdEye className="text-[20px] opacity-75" />}
               </Button>
+              
+
+            </div>
+            <div className="form-group pb-3 relative">
+              <TextField
+                id="standard-password-input"
+                label="Confirm Password"
+                type={showPassword2 ? "text" : "password"}
+                autoComplete="current-password"
+                variant="outlined"
+                className='w-full'
+                name='confirmPassword'
+                
+              />
+              <Button  onClick={() => setShowPassword2(!showPassword2)}
+                className='!absolute top-2 right-2 !min-w-[35px] !w-[35px] !h-[35px] !rounded-full !text-black link'
+              >
+                {showPassword2 ? <IoMdEyeOff className="text-[20px] opacity-75" /> : <IoMdEye className="text-[20px] opacity-75" />}
+              </Button>
 
             </div>
 
-            <a href="#" className='link cursor-pointer !text-[14px] !font-[600]' onClick={ForgetPasswd}>Forgot Password?</a>
-            <Button className='btn-org btn-lg !w-full'>Login</Button>
+           
+            <Button className='btn-org btn-lg !w-full' onClick={ChangedPassword}>Change Password</Button>
 
-          <p className="  text-center">Don't Have An Account ? <Link to="/register" className=" font-[600] cursor-pointer text-[#ff5252]">Register Now</Link></p>
-
-          <p className="text-center font-[500]">Or continue with social account</p>
-     
-            <Button className='flex gap-3 w-full !bg-[#f1f1f1] btn-lg !text-black !capitalize'><FcGoogle className='text-[25px]'/> LogIn With Google</Button>
+          
 
 
           </form>
@@ -83,4 +84,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default ForgetPassword
