@@ -125,7 +125,7 @@ const CartPanel = () => {
             View Cart
           </Button>
           </Link>
-          <Link to="/checkout" className=" w-[48%] text-center ">
+          <Link to="/CheckOut" className=" w-[48%] text-center ">
           <Button className="btn-org  btn-lg w-full">
             Checkout
           </Button>

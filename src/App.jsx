@@ -23,6 +23,7 @@ function App() {
   const [openProductDetailsModel, setOpenProductDetailsModel] = useState(false);
   const [fullWidth, setFullWidth] = useState(true);
   const [maxWidth, setMaxWidth] = useState("lg");
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const [openCartPanel, setOpenCartPanel] = useState(false);
 
@@ -56,7 +57,9 @@ function App() {
     setOpenCartPanel,
     toggleCartPanel,
     openCartPanel,
-    OpenAleartBox
+    OpenAleartBox,
+    isLoggedIn,
+    setIsLoggedIn
   };
 
   return (
@@ -94,7 +97,10 @@ function App() {
 
         </Dialog>
 
-        <Toaster />
+        <Toaster
+          position="bottom-right"
+          reverseOrder={false}
+        />
 
       </MyContext.Provider>
 

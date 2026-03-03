@@ -97,10 +97,12 @@ const updateQty = (id, newQty) => {
               <span>${total.toFixed(2)}</span>
             </div>
 
-            <Button className="w-full btn-org btn-lg flex items-center justify-center gap-2">
-              <BsFillBagCheckFill className='text-[20px]' />
-              Checkout
-            </Button>
+            <Link to="/CheckOut" className="w-full text-center">
+              <Button className="btn-org btn-lg w-full">
+                <BsFillBagCheckFill className='inline-block mr-2' />
+                Proceed to Checkout
+              </Button>
+            </Link>
 
           </div>
         </div>

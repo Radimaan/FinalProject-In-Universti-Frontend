@@ -10,6 +10,9 @@ import { Car } from "lucide-react";
 import CartPage from "../Pages/Cart";
 import VerifyPage from "../Pages/Veryfy";
 import ForgetPassword from "../Pages/ForgetPassword";
+import CheckOut from "../Pages/CheckOut";
+import MyAccount from "../Pages/MyAccount";
+import MyList from "../Pages/My-List";
 
 const MainLayout = () => {
   return (
@@ -57,7 +60,20 @@ export const router = createBrowserRouter([
       {
         path : 'ForgetPassword',
         element : <ForgetPassword/>
+      },
+      {
+        path : '/CheckOut',
+        element : <CheckOut/>
+      },
+      {
+        path : '/my-account',
+        element : <MyAccount/>
+      },
+      {
+        path : '/my-wishlist',
+        element : <MyList/>
       }
+
 
     ],
   },
