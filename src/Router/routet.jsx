@@ -13,6 +13,7 @@ import ForgetPassword from "../Pages/ForgetPassword";
 import CheckOut from "../Pages/CheckOut";
 import MyAccount from "../Pages/MyAccount";
 import MyList from "../Pages/My-List";
+import Orders from "../Pages/Orders";
 
 const MainLayout = () => {
   return (
@@ -72,6 +73,10 @@ export const router = createBrowserRouter([
       {
         path : '/my-wishlist',
         element : <MyList/>
+      },
+      {
+        path : '/my-orders',
+        element : <Orders/>
       }
 
 

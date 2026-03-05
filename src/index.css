@@ -39,6 +39,12 @@ border: 1px solid #ff5252 !important;
   width: 8px !important;
   height: 8px !important;
 }
+.overflow-x-auto::-webkit-scrollbar{
+  width: 10px !important;
+}
+.overflow-x-auto::-webkit-scrollbar-thumb{
+  background: #ccc;
+}
 ::-webkit-scrollbar-thumb{
   background: #ff5252;
 }

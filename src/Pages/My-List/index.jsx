@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import { BsFillBagCheckFill } from "react-icons/bs";
 import MylistItems from "./MylistItems";
 import { Link } from "react-router-dom";
+import AccountSideBar from "../../components/AccounSideBar";
 
 const MyList = () => {
 
@@ -44,11 +45,16 @@ const MyList = () => {
   const total = subtotal + shipping;
 
   return (
-    <section className="section py-5 pb-10">
-      <div className="container flex max-w-6xl gap-5 flex-col">
+    <section className="py-10 w-full">
+      <div className="container flex  gap-5 ">
+        <div className="col1 w-[20%]">
+          <AccountSideBar/>
+        </div>
+          
+        
 
         {/* LEFT */}
-        <div className=" w-2/3">
+        <div className=" col2 w-[70%]">
           <h2 className="text-[22px] font-bold">My Wishlist</h2>
           <p>
             There are{" "}
